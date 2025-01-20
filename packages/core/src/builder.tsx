@@ -23,10 +23,10 @@ type RenderFormProps<T extends Type<Record<string, unknown>, {}>> = {
 
 export const FormBuilder = <T extends Type<Record<string, unknown>, {}>>(
   props: RenderFormProps<T>
-) => {
+): ReactNode => {
   const jsonSchema = props.value.toJsonSchema();
-  if (!("properties" in jsonSchema)) {
-    return;
+  if (!("properties" in jsonSchema) || !jsonSchema.properties) {
+    return null;
   }
 
   const renderField = (fieldKey: string) => {
@@ -45,13 +45,13 @@ export const FormBuilder = <T extends Type<Record<string, unknown>, {}>>(
   };
 
   if (props.children) {
-    return props.children({
-      Field: (props) => renderField(props.name as string),
-    });
-  }
-
-  if (!jsonSchema.properties) {
-    return null;
+    return (
+      <>
+        {props.children({
+          Field: (props) => renderField(props.name as string),
+        })}
+      </>
+    );
   }
 
   return (

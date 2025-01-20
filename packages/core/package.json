@@ -8,6 +8,15 @@
     "dev": "NODE_ENV=development tsup --watch",
     "build": "tsup"
   },
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
   "keywords": [],
   "license": "MIT",
   "peerDependencies": {
