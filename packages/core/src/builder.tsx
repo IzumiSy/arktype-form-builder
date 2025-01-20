@@ -45,13 +45,9 @@ export const FormBuilder = <T extends Type<Record<string, unknown>, {}>>(
   };
 
   if (props.children) {
-    return (
-      <>
-        {props.children({
-          Field: (props) => renderField(props.name as string),
-        })}
-      </>
-    );
+    return props.children({
+      Field: (props) => renderField(props.name as string),
+    });
   }
 
   return (
