@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development tsup --watch",
-    "build": "tsup"
+    "build": "tsup",
+    "type-check": "tsc --noEmit --incremental --pretty",
+    "package:publish": "pnpm build && pnpm publish --access public"
   },
   "files": [
     "dist/**"
