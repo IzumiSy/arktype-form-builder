@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development tsup --watch",
     "build": "tsup",
-    "type-check": "tsc --noEmit --incremental --pretty",
-    "package:publish": "pnpm build && pnpm publish --access public"
+    "type-check": "tsc --noEmit --incremental --pretty"
   },
   "files": [
     "dist/**"
