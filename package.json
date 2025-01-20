@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "turbo dev",
-    "build": "turbo build"
+    "build": "turbo build",
+    "changeset:publish": "pnpm build && changeset publish"
   },
   "keywords": [],
   "license": "MIT",
