@@ -2,6 +2,12 @@
 
 Building forms from arktype schema
 
+## Install
+
+```bash
+npm install --save @arktype-form-builder/core
+```
+
 ## Example
 
 Think you have an Arktype schema as follows:
