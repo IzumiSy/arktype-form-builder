@@ -44,6 +44,8 @@ Through children props, you can get two components.
 * `Field` is a component to render the field by the field name in the schema
 * `Submit` is a component to render the submit button
 
+Thanks to Arktype, `name` prop in `Field` is fully typed!
+
 ```tsx
 const CustomForm = () => (
   <FormBuilder value={user} onSubmit={(data) => console.log(data)}>

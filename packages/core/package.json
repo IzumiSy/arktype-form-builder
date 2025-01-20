@@ -2,7 +2,9 @@
   "name": "@arktype-form-builder/core",
   "private": false,
   "version": "0.1.0",
-  "description": "",
+  "description": "Automated form builder with Arktype",
+  "repository": "https://github.com/IzumiSy/arktype-form-builder",
+  "homepage": "https://github.com/IzumiSy/arktype-form-builder",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development tsup --watch",
@@ -19,7 +21,15 @@
       "default": "./dist/index.mjs"
     }
   },
-  "keywords": [],
+  "keywords": [
+    "arktype",
+    "form",
+    "forms",
+    "autoform",
+    "react",
+    "validation",
+    "schema-driven"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "arktype": "^2",
