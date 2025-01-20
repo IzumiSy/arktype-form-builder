@@ -1,7 +1,7 @@
 {
-  "name": "@arktype-form-builder/core",
+  "name": "arktype-form-builder",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {

@@ -3,39 +3,40 @@ import { FormBuilder, useFormBuilder } from "@arktype-form-builder/core";
 
 const user = arktype({
   name: arktype("string > 0").configure({
-    label: "名前",
+    label: "Name",
   }),
   email: arktype("string > 0").configure({
-    label: "メールアドレス",
+    label: "E-mail",
   }),
   "category?": arktype("'admin' | 'staff'"),
 });
 
-const AutomatedForm = () => {
-  return (
-    <>
-      <p style={{ fontWeight: "bold" }}>Automated form</p>
-      <FormBuilder value={user} />
-    </>
-  );
-};
+const AutomatedForm = () => (
+  <>
+    <p style={{ fontWeight: "bold" }}>Automated form</p>
+    <FormBuilder value={user} />
+  </>
+);
 
-const CustomForm = () => {
-  return (
-    <>
-      <p style={{ fontWeight: "bold" }}>Custom form</p>
-      <FormBuilder value={user} onSubmit={(data) => console.log(data)}>
-        {({ Field, Submit }) => (
-          <>
-            <Field name="name" />
-            <Field name="email" />
-            <Submit />
-          </>
-        )}
-      </FormBuilder>
-    </>
-  );
-};
+const CustomForm = () => (
+  <>
+    <p style={{ fontWeight: "bold" }}>Custom form</p>
+    <FormBuilder value={user} onSubmit={(data) => console.log(data)}>
+      {({ Field, Submit }) => (
+        <>
+          <Field name="name" />
+          <Field
+            name="email"
+            render={(props) => {
+              return <input {...props.field} type="email" />;
+            }}
+          />
+          <Submit />
+        </>
+      )}
+    </FormBuilder>
+  </>
+);
 
 const CustomFormWithHook = () => {
   const { Field, Submit } = useFormBuilder({
@@ -45,7 +46,7 @@ const CustomFormWithHook = () => {
   return (
     <>
       <p style={{ fontWeight: "bold" }}>Custom form with hook</p>
-      <Field name="email" label="Email (ad-hoc)" />
+      <Field name="email" label="Email (ad-hoc label)" />
       <Field name="name" />
       <Submit />
     </>

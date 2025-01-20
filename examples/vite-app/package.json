@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@arktype-form-builder/core": "workspace:*",
+    "arktype-form-builder": "workspace:*",
     "arktype": "^2.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
