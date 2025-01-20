@@ -1,6 +1,6 @@
 # arktype-form-builder
 
-Building forms from arktype schema
+Building forms from [Arktype](https://arktype.io/) schema
 
 ## Install
 
