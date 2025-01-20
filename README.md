@@ -80,6 +80,18 @@ const CustomFormWithHook = () => {
 };
 ```
 
+It still provides the component to render all fields automatically which is `Autoform`.
+
+```tsx
+const AutoFormWithHook = () => {
+  const { Autoform } = useFormBuilder({
+    value: user,
+  });
+
+  return <Autoform />;
+};
+```
+
 ## Customization
 
 If you need more customization for each field, it provides render props.
