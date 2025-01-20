@@ -25,12 +25,7 @@ const CustomForm = () => (
       {({ Field, Submit }) => (
         <>
           <Field name="name" />
-          <Field
-            name="email"
-            render={(props) => {
-              return <input {...props.field} type="email" />;
-            }}
-          />
+          <Field name="email" />
           <Submit />
         </>
       )}
@@ -55,11 +50,11 @@ const CustomFormWithHook = () => {
 
 const App = () => {
   return (
-    <>
+    <div style={{ padding: "15px" }}>
       <AutomatedForm />
       <CustomForm />
       <CustomFormWithHook />
-    </>
+    </div>
   );
 };
 

@@ -14,12 +14,12 @@ importers:
 
   examples/vite-app:
     dependencies:
+      '@arktype-form-builder/core':
+        specifier: workspace:*
+        version: link:../../packages/core
       arktype:
         specifier: ^2.0.0
         version: 2.0.0
-      arktype-form-builder:
-        specifier: workspace:*
-        version: link:../..
       react:
         specifier: ^19.0.0
         version: 19.0.0
